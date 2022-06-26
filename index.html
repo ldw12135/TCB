@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				/*box-sizing: border-box;*/
+			}
+			.l{
+				float: left;
+			}
+			a{
+				text-decoration: none;
+			}
+			.r{
+				float: right;
+			}
+			li{
+				list-style: none;
+			}
+			.wrap{
+				width: 1200px;
+				margin: 0 auto;
+			}
+			.top{
+				height: 33px;
+				background-color: #F6F6F6;
+			}
+			
+		
+			.nav-zuo a{
+				display: inline-block;
+				line-height: 33px;
+				height: 33px;
+			}
+			.nav-zuo a:nth-of-type(1){
+				font-size: 17px;
+				color: green;
+			}
+			.nav-zuo a:nth-of-type(2){
+				font-size: 12px;
+				height: 18px;
+				
+				width: 67px;
+				line-height: 18px;
+				border-right: 1px solid black;
+			}
+			.nav-zuo a:nth-of-type(3){
+				font-size: 12px;
+				margin-left: 5px;
+			}
+			.nav-you ul{
+				margin-top: 7px;
+			}
+			.nav-you ul li{
+				
+				float: left;
+				font-size: 13px;
+				border-right: 1px solid black;
+				text-align: center;
+				
+				height: 17px;
+				
+				line-height: 17px;
+			}
+			.nav-you ul li:nth-of-type(1){
+				width: 49px;
+				
+			}
+			.nav-you ul li:nth-of-type(2){
+				width: 49px;
+				
+			}
+			.nav-you ul li:nth-of-type(3){
+				width: 73px;
+				
+			}
+			.nav-you ul li:nth-of-type(4){
+				width: 152px;
+/*				border: none;*/
+			}
+			.nav-you ul li:nth-of-type(5){
+				width: 86px;
+				text-align: left;
+				position: relative;
+				padding-left: 10px;
+				box-sizing: border-box;
+				
+			}
+			
+			.nav-you ul li:nth-of-type(6){
+				width: 49px;
+				
+			}
+			.nav-you ul li:nth-of-type(7){
+				width: 58px;
+				color: orange;
+				border-right: none;
+				
+			}
+		.kewu span{
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 5px;
+				border-color: black transparent transparent transparent;
+				position: absolute;
+				top: 7px;
+				margin-left: 10px;
+			}
+			.nav-zuo,.nav-you{
+				height: 33px;
+			}
+			.top2{
+				height: 80px;
+			}
+			.top2-zuo{
+				width: 200px;
+				height: 80px;
+			}
+			.top2-zuo img{
+			       width: 159px;
+    height: 54px;
+    margin-top: 16px;
+			}
+			.top2-you{
+				width: 642px;
+				height: 80px;
+			}
+			.top2-you ul{
+				margin-top: 20px;
+			}
+			.top2-you li{
+				display: inline-block;
+				text-align: center;
+				width: 102px;
+				height: 42px;
+				line-height: 42px;
+				
+			}
+			#sj{
+				position: relative;
+			}
+			#sj span{
+				display: inline-block;
+				width: 24px;
+				height: 15px;
+				background: url(img/t01198d7629a60c4940.png);
+				position: absolute;
+				top: -1px;
+			}
+			.top3{
+				height: 340px;
+				margin-top: 7px;
+			}
+			.top3-l{
+				height: 340px;
+				width: 1200px;
+				background: url(img/t012c5c0078eee282c6.png) no-repeat;
+				background-size: 1200px 342px;
+				border: 1px solid white;
+				transition: 0.8s all;
+			}
+			.tubiao{
+				position: fixed;
+				right: 85px;
+				top: 140px;
+				width: 71px;
+				height: 195px;
+				background: url(img/t0113dfdd3937c1f092.png) -78px 0px no-repeat;
+			}
+			
+			.top3 .wrap{
+				position: relative;
+			}
+			
+			.div1{
+				/*position: absolute;*/
+				width: 235px;
+				height: 84px;
+				/*top: 0px;
+				left: 0;*/
+				background: url(img/t01280de86e9d9dc470.png) 0px -208px no-repeat;
+				text-align: center;
+				background-color: #060D20;
+				opacity: 0.7;
+				margin: 0;
+			}
+			.div2{
+				/*position: absolute;*/
+				width: 235px;
+				height: 84px;
+				/*top: 85px;*/
+				/*left: 0;*/
+				background: url(img/t01280de86e9d9dc470.png) 0px -310px no-repeat;
+				opacity: 0.7;
+				margin-top: 1px;
+				text-align: center;
+				background-color: #060D20;
+			}
+			.div3{
+				/*position: absolute;*/
+				margin-top: 1px;
+				
+				width: 235px;
+				height: 84px;
+				/*top: 170px;*/
+				/*left: 0;*/
+				background: url(img/t01280de86e9d9dc470.png) 0px -10px no-repeat;
+				opacity: 0.7;
+				
+				text-align: center;
+				background-color: #060D20;
+			}
+			
+			.div4{
+				/*position: absolute;*/
+				width: 235px;
+				height: 84px;
+				/*top: 256px;*/
+				background: url(img/t01280de86e9d9dc470.png) no-repeat;
+				background-position: 0px -108px;
+				text-align: center;
+				opacity: 0.7;
+				margin-top: 1px;
+				
+				background-color: #060D20;
+			}
+			.div4 a,.div1 a,.div2 a,.div3 a{
+				font-size: 17px;
+				color: white;
+				display: inline-block;
+				line-height: 84px;
+		
+			}
+			.div3 a{
+				margin-left: 44px;
+			}
+			.div2 a{
+				margin-left: 25px;
+			}
+			.div4 a{
+				margin-left: 6px;
+			}
+			.div1 a{
+				margin-left: 45px;
+			}
+			.top3-l img{
+				height: 341px;
+			}
+			
+			.xiala{
+				position: absolute;
+				top: 17px;
+    left: -1px;
+    width: 96px;
+				border: 1px solid white;
+				height: 69px;
+				background: white;
+				display: none;
+			}
+			.xiala a{
+				display: block;
+				text-indent: 10px;
+				width: 97px;
+				height: 30px;
+				line-height: 30px;
+				font-size: 13px;
+				
+			}
+			.kewu{
+				position: relative;
+			}
+			
+			.xiaodian li{
+				display: inline-block;
+				position: absolute;
+				
+				height: 15px;
+				width: 15px;
+				border-radius: 50%;
+				background-color: black;
+			}
+			.xiaodian li:nth-of-type(1){
+				top: 310px;
+				left: 1104px;
+				background-color: red;
+			}
+			.xiaodian li:nth-of-type(2){
+				top: 310px;
+				left: 1124px;
+			}
+			.xiaodian li:nth-of-type(3){
+				top: 310px;
+				left: 1144px;
+			}
+			.top2-caidan{
+				position: absolute;
+				top: 0px;
+				left: 234px;
+				
+			}
+			.top2-caidan li{
+				position: absolute;
+				display: none;
+				z-index: 9999;
+			}
+			.top4-nei img{
+				float: left;
+			}
+			.top4{
+				height: 200px;
+			}
+			.top5{
+				height: 350px;
+			}
+			.top5-top{
+				height: 48px;
+			}
+			.top5-top h2{
+				float: left;
+			}
+			.top5-top a{
+				float: right;
+				height: 48px;
+				line-height: 48px;
+				margin-right: 10px;
+			}
+			.top5-down{
+				height: 301px;
+			}
+			.top5-down div{
+				float: left;
+			}
+			.top5-down div:nth-of-type(1){
+				width: 200px;
+				height: 301px;
+				
+			}
+			.top5-down div:nth-of-type(1) img{
+				width: 200px;
+				height: 301px;
+			}
+			.top5-down div:nth-of-type(2){
+				width: 190px;
+				height: 301px;
+				text-align: center;
+				background-color: white;
+				border-right: 1px solid #F7F7F7;
+			}
+			.top5-down div:nth-of-type(2) img{
+				width: 79.33px;
+				height: 160px;
+				margin-top: 50px;
+				
+			}
+			.top5-down div:nth-of-type(2) p{
+				margin-top: 30px;
+				
+			}
+			.top5-down div:nth-of-type(3){
+				width: 190px;
+				background-color: white;
+				height: 301px;
+				text-align: center;
+				border-right: 1px solid #F7F7F7;
+			}
+			.top5-down div:nth-of-type(3) img{
+				width: 79.33px;
+				height: 160px;
+				margin-top: 50px;
+				
+			}
+			.top5-down div:nth-of-type(3) p{
+				margin-top: 30px;
+				
+			}
+			.top5-down div:nth-of-type(4){
+				width: 190px;
+				height: 301px;
+				background-color: white;
+				text-align: center;
+				border-right: 1px solid #F7F7F7;
+			}
+			.top5-down div:nth-of-type(4) img{
+				width: 79.33px;
+				height: 160px;
+				margin-top: 50px;
+				
+			}
+			.top5-down div:nth-of-type(4) p{
+				margin-top: 30px;
+				
+			}
+			.top5-down div:nth-of-type(5){
+				width: 190px;
+				height: 301px;
+				background-color: white;
+				text-align: center;
+				border-right: 1px solid #F7F7F7;
+			}
+			.top5-down div:nth-of-type(5) img{
+				width: 79.33px;
+				height: 160px;
+				margin-top: 50px;
+				
+			}
+			.top5-down div:nth-of-type(5) p{
+				margin-top: 30px;
+				
+			}
+			.top5-down div:nth-of-type(6){
+				width: 190px;
+				background-color: white;
+				height: 301px;
+				text-align: center;
+				border-right: 1px solid #F7F7F7;
+			}
+			.top5-down div:nth-of-type(6) img{
+				width: 160px;
+				height: 160px;
+				margin-top: 50px;
+				
+			}
+			.top5-down div:nth-of-type(6) p{
+				margin-top: 30px;
+				
+			}
+			.top6{
+				height: 350px;
+			}
+			.top6-top{
+				height: 48px;
+			}
+			.top6-top h2{
+				float: left;
+			}
+			.top6-top a{
+				float: right;
+				display: block;
+				height: 48px;
+				line-height: 48px;
+				margin-right: 10px;
+			}
+			.top6-down{
+				height: 301px;
+			}
+			.top6-down div{
+				float: left;
+			}
+			.top6-down div:nth-of-type(1){
+				width: 200px;
+				height: 301px;
+			}
+			.top6-down div:nth-of-type(1) img{
+				width: 200px;
+				height: 301px;
+			}
+			.top6-down div:nth-of-type(2){
+				width: 190px;
+				height: 301px;
+				text-align: center;
+				background-color: white;
+				border-right: 1px solid #F7F7F7;
+			}
+			.top6-down div:nth-of-type(2) img{
+				width: 160px;
+				height: 160px;
+				margin-top: 50px;
+				
+			}
+			.top6-down div:nth-of-type(2) p{
+				margin-top: 30px;
+				
+			}
+			.top6-down div:nth-of-type(3){
+				width: 190px;
+				height: 301px;
+				text-align: center;
+				background-color: white;
+				border-right: 1px solid #F7F7F7;
+			}
+			.top6-down div:nth-of-type(3) img{
+				width: 160px;
+				height: 160px;
+				margin-top: 50px;
+				
+			}
+			.top6-down div:nth-of-type(3) p{
+				margin-top: 30px;
+				
+			}
+			.top6-down div:nth-of-type(4){
+				width: 190px;
+				background-color: white;
+				height: 301px;
+				text-align: center;
+				border-right: 1px solid #F7F7F7;
+			}
+			.top6-down div:nth-of-type(4) img{
+				width: 160px;
+				height: 160px;
+				margin-top: 50px;
+				
+			}
+			.top6-down div:nth-of-type(4) p{
+				margin-top: 30px;
+				
+			}
+			.top6-down div:nth-of-type(5){
+				width: 190px;
+				background-color: white;
+				height: 301px;
+				text-align: center;
+				border-right: 1px solid #F7F7F7;
+			}
+			.top6-down div:nth-of-type(5) img{
+				width: 160px;
+				height: 160px;
+				margin-top: 50px;
+				
+			}
+			.top6-down div:nth-of-type(5) p{
+				margin-top: 30px;
+				
+			}
+			.top6-down div:nth-of-type(6){
+				width: 190px;
+				background-color: white;
+				height: 301px;
+				text-align: center;
+				border-right: 1px solid #F7F7F7;
+			}
+			.top6-down div:nth-of-type(6) img{
+				width: 160px;
+				height: 160px;
+				margin-top: 50px;
+				
+			}
+			.top6-down div:nth-of-type(6) p{
+				margin-top: 30px;
+				
+			}
+			.top6-down div h4{
+				margin-top: 10px;
+				color: red;
+				
+			}
+			.top7-top{
+				height: 48px;
+			}
+			.top7-top h2{
+				float: left;
+				height: 48px;
+				line-break: 48px;
+			}
+			.top7-l{
+				height: 280px;
+				
+			}
+			.top7-l div{
+				float: left;
+				width: 298px;
+				height: 280px;
+				/*border: 1px solid red;*/
+			}
+			.top7-l div:nth-of-type(1),.top7-l div:nth-of-type(2){
+				text-align: center;
+				background-color: white;
+				
+			}
+			.top7-l div:nth-of-type(1) img,.top7-l div:nth-of-type(2) img{
+				margin-top: 30px;
+			}
+.top7-l div:nth-of-type(1) a,.top7-l div:nth-of-type(2) a{
+				display: inline-block;
+				width: 199px;
+				height: 64.6;
+				text-align: left;
+				margin: 15px auto;
+				
+			}
+			.top7-l div:nth-of-type(3) h3{
+				margin-top: 20px 10px;
+			}
+			.top7-l div:nth-of-type(3) ul{
+				margin-left: 20px;
+			}
+			.top7-l div:nth-of-type(3) li{
+				height: 30px;
+				line-height: 30px;
+				margin-top: 25px;
+			}
+			.top7-l div:nth-of-type(3){
+				background-color: white;
+
+			}
+			.top7-l div:nth-of-type(3) ul{
+				width: 298px;
+				height: 220px;
+				overflow: hidden;
+				margin-top: 20px;
+			}
+			.top7-l div:last-of-type{
+				background-color: white;
+				text-align: center;
+			}
+			.top7-l div:last-of-type img{
+				margin-top: 40px;
+			}
+			.top7-l div:last-of-type p{
+				margin-top: 25px;
+			}
+			.top9 img{
+				width: 1190px;
+			}
+			#haha{
+				width: 100%;
+				height: 1485px;
+				background-color: #F7F7F7;
+			}
+			.fanhui{
+				position: fixed;
+				bottom: 20px;
+				height: 74px;
+				width: 27px;
+				right: 10px;
+				display: none;
+				background: url(img/t0133a58c2890e5177f.png) 0px 0px no-repeat;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="wrap">
+					<div class="nav-zuo l">
+						<a href="">漯河</a>
+						<a href="">[切换城市]</a>
+						<a href="">同城帮首页</a>
+					</div>
+					<div class="nav-you r">
+						<ul>
+							<li><a href="">登录</a></li>
+							<li><a href="">注册</a></li>
+							<li><a href="">我的订单</a></li>
+							<li><a href="">在线客服(9:00-21:00)</a></li>
+							<li class="kewu">
+								<a href="">客户服务<span></span></a>
+							    <div class="xiala">
+							    	<a href="">帮助中心</a>
+							    	<a href="">维修服务</a>
+							    </div>
+							</li>
+							<li><a href="">论坛</a></li>
+							<li><a href="">投诉建议</a></li>
+						</ul>
+					</div>
+			</div>
+		</div>
+		<div class="top2">
+			<div class="wrap">
+				
+				<div class="top2-zuo l">
+					<img src="img/t0150a38c21c1753441.png"/>
+				</div>
+				<div class="top2-you r">
+					<ul>
+						<li id="sj">手机优品<span></span></li>
+						<li>手机回收</li>
+						<li>手机维修</li>
+						<li>电脑维修</li>
+						<li>以旧换新</li>
+						<li>手机租用</li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		<div class="top3">
+			<div class="wrap">
+				<div class="top3-l">
+					<div class="top3-z l">
+					<div class="div1">
+						<a>卖手机/电脑</a>
+					</div>
+					<div class="div2">
+					 <a>  买二手机</a>
+					</div>
+					<div class="div3">
+					<a> 修手机/Pad</a>
+					</div>
+					<div class="div4">
+						<a>修电脑</a>
+					</div>
+				</div>
+				</div>
+				
+				<div class="xiaodian">
+					<ul class="ul2">
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="top2-caidan">
+					<li><img src="img/捕获1.JPG"/></li>
+					<li><img src="img/捕获2.JPG"/></li>
+					<li><img src="img/捕获3.JPG"/></li>
+					<li><img src="img/捕获4.JPG"/></li>
+				</div>
+			</div>
+		</div>
+		<div class="tubiao">
+			
+		</div>
+		<div id="haha">
+			
+		
+		<div class="top4">
+			<div class="wrap">
+				<div class="top4-nei l">
+					<img src="img/t0191abd7e2a0854d68.png"/>
+					<img src="img/t01507ce1c3424484c6.png"/>
+					<img src="img/t0168fe13f81f15de38.png"/>
+					<img src="img/t01c35e54128c368684.png"/>
+				</div>
+			</div>
+		</div>
+		<div class="top5">
+			<div class="wrap">
+				
+				<div class="top5-top">
+					<h2>热门手机回收</h2>
+					<a>查看更多</a>
+				</div>
+				<div class="top5-down">
+					<div><img src="img/捕获7.JPG"></div>
+					<div>
+						<img src="img/t01068fe5e76aa7e910.jpg">
+						<p>苹果iphone 6</p>
+					</div>
+					<div>
+						<img src="img/t01ddf19cbaa3a791b7.jpg">
+						<p>苹果iPhone 5s</p>
+					</div>
+					<div>
+						<img src="img/t0154d371a550ee894f.jpg">
+						<p>小米 M4</p>
+					</div>
+					<div>
+						<img src="img/t01078047308a85471c.jpg">
+						<p>华为 Mate7</p>
+					</div>
+					<div>
+						<img src="img/t0127e99c045a53e82e.jpg">
+						<p>魅族 MX5</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="top6">
+			<div class="wrap">
+				
+				<div class="top6-top">
+					<h2>优品精选</h2>
+					<a>查看更多</a>
+				</div>
+				<div class="top6-down">
+					<div><img src="img/捕获8.JPG"></div>
+					<div>
+						<img src="img/t017b8d57b2ff99dc74.jpg">
+						<p>苹果iphone 9 Plus</p>
+						<h4>¥2999</h4>
+					</div>
+					<div>
+						<img src="img/t01b788a3bbc39623c1 (1).jpg">
+						<p>苹果iPhone 5s</p>
+						<h4>¥1729</h4>
+						
+					</div>
+					<div>
+						<img src="img/t013c52464f43808e12.jpg">
+						<p>小米 M4</p>
+						<h4>¥2999</h4>
+						
+					</div>
+					<div>
+						<img src="img/t01b788a3bbc39623c1 (1).jpg">
+						<p>华为 Mate7</p>
+						<h4>¥2999</h4>
+					</div>
+					<div>
+						<img src="img/t013f5c94d2dd4735e1.jpg">
+						<p>魅族 MX5</p>
+						<h4>¥1729</h4>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="top7">
+			<div class="wrap">
+				<div class="top7-top">
+					<h2>媒体报道</h2>
+				</div>
+			<div class="top7-l l">
+				<div>
+					<img  src="img/t01bdab1afe6cfbf38e.png"/>
+					<a>二手机中的隐私安全:揭秘电子产品回收的"最后一公里"</a>
+				</div>
+				<div>
+					<img  src="img/t013b1af9b113b7ff5e.png"/>
+					<a>专访360同城帮CEO邓立群:如何解决手机回收中营私安全的痛点</a>
+				</div>
+				<div>
+					<h3>更多报道</h3>
+					<ul id="hehe">
+						<li>同城帮让回忆有价值，让回收有安全</li>
+						<li>同城帮携手支付宝芝麻信用开展...</li>
+						<li>同城帮让回忆有价值，让回收有安全</li>
+						<li>同城帮携手支付宝芝麻信用开展...</li>
+						<li>同城帮让回忆有价值，让回收有安全</li>
+						<li>同城帮携手支付宝芝麻信用开展...</li>
+						<li>同城帮让回忆有价值，让回收有安全</li>
+						<li>同城帮携手支付宝芝麻信用开展...</li>
+					</ul>
+				</div>
+				<div>
+					<img src="img/t01f75cb0a28f5abd98.png"/>
+					<p>同城帮第三代隐私粉碎技术</p>
+				</div>
+			</div>	
+			</div>
+		</div>
+		<div class="top9">
+			<div class="wrap">
+				<img src="img/捕获11.JPG">
+			</div>
+		</div>
+		</div>
+		<div class="fanhui">
+			
+		</div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+   <script type="text/javascript">
+   	$(".kewu").hover(function(){
+   		$(this).find(":hidden").css("display","block");
+   		$(this).css({"border":"1px solid black","border-bottom":"none"});
+   		$(".xiala").css({"border":"1px solid black","border-top":"none"});
+   	},function(){
+   		$(this).find(":hidden").css("display","none");
+   		$(this).css({"border":"1px solid #F6F6F6","border-right":"1px solid black"});
+   		$(".xiala").hide();
+   	}
+   	)
+//   	轮播
+var stop=true;
+var image=["t012c5c0078eee282c6.png","t01539c9a4f88bd129f.png","t01ebfba1c3bc5f37e5.png"]
+var i=0;
+    $(".xiaodian li").mouseover(function(){
+      i=$(this).index();
+    $(".top3-l").css({"background":"url(img/"+image[i]+")","background-size":"1200px 342px"})
+    $(this).css("background-color","red");
+    $(this).siblings().css("background-color","black")
+    })
+    function jia(){
+    	if(i>=2){
+    		i=0;
+    		 $(".top3-l").css({"background":"url(img/"+image[i]+")","background-size":"1200px 342px"})
+    		 $(".xiaodian li").eq(i).css("background-color","red");
+    		 $(".xiaodian li").eq(i).siblings().css("background-color","black");
+    	}else{
+    		i=i+1;
+    		$(".top3-l").css({"background":"url(img/"+image[i]+")","background-size":"1200px 342px"})
+    		 $(".xiaodian li").eq(i).css("background-color","red");
+    		 $(".xiaodian li").eq(i).siblings().css("background-color","black");
+    	}
+    }
+    $(".top3").hover(function(){
+    	stop=false;
+    },function(){
+    	stop=true;
+    }
+    )
+    setInterval(function(){
+    	if(stop==true){
+    		jia();
+    	}
+    },2000)
+    //二级菜单
+    $(".div1").hover(function(){
+    	$(this).css("background-color","#128856")
+    	$(".top2-caidan li").eq(0).css("display","block")
+    	
+    },function(){
+    	$(this).css("background-color","#060D20");
+$(".top2-caidan li").eq(0).css("display","none")
+    })
+     $(".div2").hover(function(){
+    	$(this).css("background-color","#128856")
+    	$(".top2-caidan li").eq(1).css("display","block")
+    	
+    },function(){
+    	$(this).css("background-color","#060D20");
+$(".top2-caidan li").eq(1).css("display","none")
+    })
+      $(".div3").hover(function(){
+    	$(this).css("background-color","#128856")
+    	$(".top2-caidan li").eq(2).css("display","block")
+    	
+    },function(){
+    	$(this).css("background-color","#060D20");
+$(".top2-caidan li").eq(2).css("display","none")
+    })
+       $(".div4").hover(function(){
+    	$(this).css("background-color","#128856")
+    	$(".top2-caidan li").eq(3).css("display","block")
+    	
+    },function(){
+    	$(this).css("background-color","#060D20");
+$(".top2-caidan li").eq(3).css("display","none")
+    })
+       $(".top2-caidan li").hover(function(){
+       	$(this).show()
+       },function(){
+       	$(this).hide()
+       }
+       )
+      $(".fanhui").click(function(){
+      	$(window).scrollTop(0)
+      })
+      $(window).scroll(function(){
+       var a=$(this).scrollTop();
+       if(a>=465){
+       	$(".fanhui").show()
+       }
+       if(a<465){
+       		$(".fanhui").hide()
+       }
+      })
+     
+
+//垂直向上滚动
+    function move(){
+        var marginTop=0;
+        var stop=false;
+        var interval=setInterval(function(){
+            if(stop) return;
+            $("#hehe").children("li").first().animate({"margin-top":marginTop--},0,function(){
+                var $first=$(this);
+                if(!$first.is(":animated")){
+                    if((-marginTop)>$first.height()){
+                        $first.css({"margin-top":25}).appendTo($("#hehe"));
+                        marginTop=25;
+                    }
+                }
+            });
+        },50);
+        $("#hehe").mouseover(function(){
+            stop=true;
+        }).mouseout(function(){
+            stop=false;
+        });
+    }
+    move();
+
+
+
+   </script>
+</html>
